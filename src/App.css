@@ -1,0 +1,36 @@
+#root{
+  background-color: black;
+  height: 100vh;
+
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  color: azure;
+  text-align: center;
+}
+
+.wrapper {
+  padding: 16px;
+}
+
+input,
+textarea {
+  width: 800px;
+  padding: 8px;
+}
+
+img {
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+button{
+  padding: 8px;
+  background-color: #29c4a9;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
