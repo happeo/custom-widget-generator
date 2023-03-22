@@ -1,6 +1,6 @@
 # Happeo Custom Widget generator
 
-- Try it out here (https://happeo.github.io/custom-widget-generator/) https://happeo.github.io/custom-widget-generator/
+- Try it out [here](https://happeo.github.io/custom-widget-generator/) or bookmark this URL https://happeo.github.io/custom-widget-generator/
 
 ## Available Scripts
 
@@ -16,4 +16,4 @@ You will also see any lint errors in the console.
 
 ### `npm run deploy`
 
-Deploys the website to github pages here (https://happeo.github.io/custom-widget-generator/)
+Deploys the website to github pages [here](https://happeo.github.io/custom-widget-generator/)
