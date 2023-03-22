@@ -14,8 +14,6 @@ function App() {
     a.href = downloadUrl;
     a.download = "custom-widget.js";
     a.click();
-
-    // window.open(downloadUrl, "_blank");
   };
 
   return (
