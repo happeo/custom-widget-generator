@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import "./App.css";
+import { generateIframeTemplate } from "./templat-iframe";
 import { generateTemplate } from "./template";
 
 function App() {
   const [slug, setSlug] = useState("");
   const [script, setScript] = useState("");
+  const [shouldUseIframe, setShouldUseIframe] = useState(false);
 
   const handleScript = () => {
-    const scriptTxt = generateTemplate(slug, script);
+    const scriptTxt = shouldUseIframe
+      ? generateIframeTemplate(slug, script)
+      : generateTemplate(slug, script);
     const jsFile = new Blob([scriptTxt], { type: "application/javascript" });
     const downloadUrl = window.URL.createObjectURL(jsFile);
     const a = document.createElement("a");
@@ -35,6 +39,13 @@ function App() {
             onChange={(e) => setScript(e.target.value)}
             rows={20}
           />
+        </div>
+        <div className="wrapper">
+          <label>Use Iframe: </label>
+          <input
+            type="checkbox"
+            onChange={(e) => setShouldUseIframe(e.target.checked)}
+          ></input>
         </div>
         <div className="wrapper">
           <button onClick={handleScript}>Generate</button>
