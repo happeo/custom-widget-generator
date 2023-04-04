@@ -41,11 +41,11 @@ function App() {
           />
         </div>
         <div className="wrapper">
+          <label>Injects a script tag: </label>
           <input
             type="checkbox"
             onChange={(e) => setShouldUseIframe(e.target.checked)}
           ></input>
-          <label>Injects a script tag: </label>
         </div>
         <div className="wrapper">
           <button onClick={handleScript}>Generate</button>
