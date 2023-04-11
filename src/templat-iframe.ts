@@ -110,7 +110,7 @@ export function generateIframeTemplate(slug: string, scriptToInsert: string) {
   scriptToInsert = scriptToInsert
     .replaceAll("'", "\\'")
     .replaceAll('"', '\\"')
-    .replaceAll("/n", "");
+    .replace(/(\r\n|\n|\r)/gm, "");
   const sizeChangeEventName = `sizeChange${className}`;
   const parsedMutationObserver = mutationObserverScript
     .replaceAll("\n", "")

@@ -13,6 +13,7 @@ function App() {
       ? generateIframeTemplate(slug, script)
       : generateTemplate(slug, script);
     const jsFile = new Blob([scriptTxt], { type: "application/javascript" });
+    console.log("🚀 ~ file: App.tsx:16 ~ handleScript ~ scriptTxt:", scriptTxt)
     const downloadUrl = window.URL.createObjectURL(jsFile);
     const a = document.createElement("a");
     a.href = downloadUrl;

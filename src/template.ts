@@ -65,6 +65,11 @@ window.customElements.get(slugVar) ||
 
 export function generateTemplate(slug: string, scriptToInsert: string) {
   const className = Math.random().toString(16).replace("0.", "");
+  scriptToInsert = scriptToInsert
+    .replaceAll("'", "\\'")
+    .replaceAll('"', '\\"')
+    .replace(/(\r\n|\n|\r)/gm, "");
+
   return templateScript
     .replace("enter-your-slug-within-these-quotes", slug)
     .replaceAll("CustomWidgetClassName", `HappeoWidget${className}`)
